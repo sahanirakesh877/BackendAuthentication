@@ -2,9 +2,6 @@ const User = require("../Models/UserSchema");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
-const passport = require("passport");
-const GoogleStrategy = require("passport-google-oauth20").Strategy;
-
 
 const JWT_SECRETE_KEY = process.env.JWT_SECRETE_KEY || rolexbhai123;
 
@@ -152,13 +149,9 @@ const forgetpassword = async (req, res) => {
   }
 };
 
-
-
-
 module.exports = {
   register,
   login,
   changePassword,
   forgetpassword,
-  
 };

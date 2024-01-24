@@ -18,6 +18,10 @@ const usersSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  googleId:{
+    type: String,
+    required: true,
+  }
 });
 
 const userSchema = mongoose.model("userprofile", usersSchema);
